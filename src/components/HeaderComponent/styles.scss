@@ -1,0 +1,57 @@
+@use "../../App.scss" as style;
+
+.header-component-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 150px;
+    position: fixed;
+    padding: 57px 125px 57px 125px ;
+    height: 72px;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: #DCE9E2;
+    .select-change-locale {
+        width: 100px;
+        background: none;
+        border: 1px solid style.$primary-color;
+        border-radius: 5px;
+        height: 25px;
+        color: #495057;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    img {
+        width: 25%;
+    }
+    .icon-show-menu {
+        width: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 1025px) {
+    .header-component-wrapper {
+        gap: 80px;
+    }
+}
+
+
+@media only screen and (max-width: 920px) {
+    .header-component-wrapper {
+        gap: 40px;
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .header-component-wrapper {
+        padding: 24px;
+        img {
+            width: 25%;
+        }
+        .icon-show-menu {
+            width: 40px;
+        }
+    }
+}

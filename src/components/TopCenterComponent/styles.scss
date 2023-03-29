@@ -1,0 +1,27 @@
+.top-center-component {
+    display: flex;
+    .top-center-content {
+        margin-top: 100px
+    }
+    .top-center-image {
+        margin-top: 100px;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .top-center-component {
+        display: block;
+        text-align: center;
+        .top-center-content {
+            margin-top: 100px;
+        }
+        .top-center-image {
+            margin-top: 60px;
+            padding-bottom: 160px;
+            img {
+                width: 250px;
+            }
+        }
+    }
+}

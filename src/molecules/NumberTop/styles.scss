@@ -1,0 +1,21 @@
+.number {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #212529;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #00856F;
+}
+
+@media only screen and (max-width: 750px) {
+    .number-top {
+        padding: 40px 80px 20px 80px;
+        padding-right: 80px;
+        text-align: center;
+    }
+}

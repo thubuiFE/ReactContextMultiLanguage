@@ -1,0 +1,23 @@
+.button-wrapper {
+    width: 263px;
+    min-width: 180px;
+    height: 52px;
+    background: #DCE9E2;
+    border-radius: 40px;
+    border: 1px solid #00856F;
+    line-height: 52px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #00856F;
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    
+    img {
+        margin-right: 10px;
+    }
+}

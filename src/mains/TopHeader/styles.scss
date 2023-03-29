@@ -1,0 +1,21 @@
+@use "../../App.scss" as style;
+
+.top-header-wrapper {
+    background-color: #DCE9E2;
+    position: relative;
+    .top-header-content {
+        padding: style.$padding;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .top-header-content {
+        padding: 50px !important;
+    }
+  }
+
+@media only screen and (max-width: 750px) {
+    .top-header-content {
+        padding: 24px !important;
+    }
+  }

@@ -1,0 +1,9 @@
+@use "../../App.scss" as style;
+
+.section-text-wrapper {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+    color: style.$primary-color;
+}
