@@ -51,6 +51,38 @@ Tuy nhiên component `Header` **không cần** dữ liệu `theme`, mà nó sẽ
 ![image](https://user-images.githubusercontent.com/117882381/228414932-8d887c16-6f04-49d4-bc2f-3e51e9564ce0.png)
 
 # Demo React Context MultiLanguage
+- Để minh hoạ cho những lý thuyết bên trên, mình sẽ demo **chức năng đa ngôn ngữ** sử dụng React Context. 
+
+## Bước 1: Tạo bộ từ điển
+- Tạo folder `/languages` bao gồm các file: vi.json, en.json, index.json. Đây là nơi chứa các text cần được đa ngôn ngữ trong ứng dụng. 
+
+## Bước 2: Tạo context
+- Tạo folder `/contexts` chứa file `LocaleContext.js`. Đây sẽ là file xử lý đa ngôn ngữ cho toàn ứng dụng. 
+
+- Giải thích code
+    * Tạo `context` sử dụng phương thức `createContext`
+    * `LocalProvider` sẽ đảm nhận bọc ngoài các component cần đa ngôn ngữ, nhận vào `children` là các component. 
+    * Dữ liệu cần sử dụng sẽ được thêm vào `context provider` thông qua prop `value` bao gồm
+        1. ***locale***: ngôn ngữ hiện tại
+        2. ***setLocale***: cập nhật lại ngôn ngữ
+        3. ***localeDataSource***: bộ từ điển của ứng dụng
+    * Định nghĩa `useLocale` để lấy bộ dữ liệu ra sử dụng ở các component thông qua hook `useContext`
+
+- Bên cạnh `context`, mình sử dụng thêm custom hook: `useLocalStorage` - dùng để cập nhật lại ngôn ngữ mà người dùng chọn và lưu vào `localStorage`. Ngôn ngữ mặc định sẽ là `vi`
+
+## Bước 3: Đóng gói các components với LocalProvider
+- Ở bước này, mong muốn đa ngôn ngữ toàn bộ ứng dụng, nên mình sẽ cho `LocalProvider` bọc bên ngoài App
+
+## Bước 4: Setup bộ chọn ngôn ngữ
+- Ở đây, mình sẽ sử dụng `select` cho người dùng chọn ngôn ngữ.
+
+- Giải thích code
+    * Sử dụng hook `useLocale` để lấy ra các giá trị được lưu trong context
+    * `defaultValue`: lấy locale - ngôn ngữ mặc định lưu trong localStorage
+    * `onChange`: khi select thay đổi, gọi `setLocale` để cập nhật lại ngôn ngữ vào localStorage
+
+## Bước 5: Gắn text cần đa ngôn ngữ
+- Sử dụng bộ dữ liệu `localeDataSource` trong context. Map đúng key với text cần hiển thị, chúng ta đã hoàn thành đa ngôn ngữ cho ứng dụng. 
 
 # References
 https://www.freecodecamp.org/news/react-context-for-beginners/
