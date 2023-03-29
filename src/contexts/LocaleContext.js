@@ -10,6 +10,7 @@ const LocaleContext = createContext();
 
 export const LocalProvider = ({ children }) => {
   const [locale, setLocale] = useLocalStorage("locale", "vi");
+  
   return (
     <LocaleContext.Provider
       value={{

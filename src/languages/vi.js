@@ -8,8 +8,7 @@ const vi = {
   schedule_your_consultation: "Đặt lịch tư vấn",
   welcome_to_doctor_care: "CHÀO MỪNG ĐẾN VỚI DOCTORCARE 👋",
   description_welcome_to_doctor_care: "Các bác sĩ của DoctorCare đã đưa ra một số nguyên nhân để tìm ra nguyên nhân gây ra bệnh doença và tỷ lệ thành công trong một thời gian dài.",
-  simplified_healthcare_for_everyone:
-    "Chăm sóc sức khoẻ đơn giản cho mọi người",
+  simplified_healthcare_for_everyone: "Chăm sóc sức khoẻ đơn giản cho mọi người",
   schedule_your_appointment: "Lên lịch cuộc hẹn của bạn",
   patients_treated: "Bệnh nhân điều trị",
   specialists_available: "Chuyên gia",

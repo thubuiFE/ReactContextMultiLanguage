@@ -7,11 +7,11 @@ import "./App.scss";
 
 function App() {
     return (
-        <div className="doctor-care-wrapper">
-            <LocalProvider>
+        <LocalProvider>
+            <div className="doctor-care-wrapper">
                 <TopHeader />
-            </LocalProvider>
-        </div>
+            </div>
+        </LocalProvider>
     );
 }
 
